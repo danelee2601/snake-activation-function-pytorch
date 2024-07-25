@@ -52,7 +52,7 @@ For more details on the Snake Activation Function and its implementation, please
 
 
 ## Variant: Flexible Snake
-The original snake function has a single $a$. The function can be expanded by having $a$ per channel. 
+The original snake function has a single $a$. The function can be expanded by having $a$ per channel to allow different non-linearities for different channels, which can potentially lead to better performance. 
 For example, consider a 1D input tensor with dimensions $(\text{batch\_size}, \text{n\_channels}, \text{length}) = (b, c, l)$. The function can have $c$ instances of $a$. For 2D input tensor with dimensions $(\text{batch\_size}, \text{n\_channels}, \text{height}, \text{width}) = (b, c, h, w)$, it's the same -- $c$ instances of $a$.
 
 Examples:
@@ -101,6 +101,8 @@ out = model_1d(x)  # (4 16 100)
 x_2d = torch.rand(4, 3, 32, 32)
 out = model_2d(x)  # (4 16 32 32)
 ```
+
+I found that `FlexibleSnakeActivation` generally results in better performance than `SnakeActivation`.
 
 ## Reference
 [1] Ziyin, Liu, Tilman Hartwig, and Masahito Ueda. "Neural networks fail to learn periodic functions and how to fix it." Advances in Neural Information Processing Systems 33 (2020): 1583-1594.
