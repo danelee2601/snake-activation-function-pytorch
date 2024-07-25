@@ -53,7 +53,7 @@ For more details on the Snake Activation Function and its implementation, please
 
 ## Variant: Flexible Snake
 The original snake function has a single $a$. The function can be expanded by having $a$ per channel to allow different non-linearities for different channels, which can potentially lead to better performance. 
-For example, consider a 1D input tensor with dimensions $(\text{batch size}, \text{num channels}, \text{length}) = (b, c, l)$. The function can have $c$ instances of $a$. For 2D input tensor with dimensions $(\text{batch size}, \text{num channels}, \text{height}, \text{width}) = (b, c, h, w)$, it's the same -- $c$ instances of $a$.
+For example, consider a 1D input tensor with dimensions $(\text{batch size}, \text{num channels}, \text{length}) = (b, c, l)$. The function can have $c$ instances of $a$. For 2D input tensor with dimensions $(\text{batch size}, \text{num channels}, \text{height}, \text{width}) = (b, c, h, w)$, it's the same, i.e., $c$ instances of $a$.
 
 Examples:
 ```python
