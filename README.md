@@ -5,7 +5,7 @@ The Snake Activation Function [1] is a novel activation function for neural netw
 ## Features
 
 - **Learnable and Unlearnable Options**: The Snake Activation Function implementation offers both learnable and unlearnable options for $a$. This allows flexibility in choosing whether the parameters of the activation function should be updated during training or remain fixed.
-- **Initialization for Snake**: [1] suggests $0.2 \leq a \leq a_{max}$ for standard tasks such as image classification. However, for tasks with expected periodicity, larger $a$, usually from $5$ to $50$ tned to work well.
+- **Initialization for Snake**: [1] suggests $0.2 \leq a \leq a_{max}$ for standard tasks such as image classification. However, for tasks with expected periodicity, larger $a$, usually from $5$ to $50$ tend to work well.
 
 
 ## Usage
